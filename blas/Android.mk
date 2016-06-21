@@ -43,7 +43,7 @@ eigen_SRC_FILES:= \
 	f2c/r_cnjg.c
 
 # Clang has issues processing some 32bit floating point operations
-LOCAL_CLANG_arm := false
+LOCAL_CLANG := false
 LOCAL_CLANG := true
 # EIGEN_ANDROID_SSE_WR is for "Eigen Android SSE Work Around"
 # Will be removed after we understand it better.
@@ -58,7 +58,7 @@ include $(BUILD_STATIC_LIBRARY)
 
 # Build Eigen using API 8 toolchain for RS Support lib.
 include $(CLEAR_VARS)
-LOCAL_CLANG_arm := false
+LOCAL_CLANG := false
 LOCAL_CLANG := true
 # EIGEN_ANDROID_SSE_WR is for "Eigen Android SSE Work Around"
 # Will be removed after we understand it better.
